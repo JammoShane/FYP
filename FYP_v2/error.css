@@ -1,0 +1,12 @@
+.masthead{
+    background-image: url(images/lambo.png);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
