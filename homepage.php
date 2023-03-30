@@ -29,16 +29,16 @@
             <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="customize.php">Customize</a>
+            <a class="nav-link" href="customize.html">Customize</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="car_entry.php">Car Entry</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="search.php">Search</a>
+            <a class="nav-link" href="search.html">Search</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="bill.php">Bill</a>
+            <a class="nav-link" href="bill.html">Bill</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="database.php">Database</a>
@@ -52,12 +52,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="images/idea.jpg" alt="image of lightbulbs" class="img-fluid" />
+          <img src="images/idea.jpg" alt="image of a Bughatti Chiron" class="img-fluid" />
         </div>
         <div class="col-md-6">
           <h1>Car Customization System</h1>
           <p>Customize an existing car's details to your liking</p>
-          <button type="button" class="btn btn-primary" onclick="location.href = 'customize.php' ">
+          <button type="button" class="btn btn-primary" onclick="location.href = 'customize.html' ">
             Customize!
           </button>
         </div>
@@ -87,7 +87,7 @@
         <div class="col-md-6">
           <h1>Search Entry</h1>
           <p>Search for cars and their details to the existing database</p>
-          <button type="button" class="btn btn-primary" onclick="location.href = 'search.php' ">
+          <button type="button" class="btn btn-primary" onclick="location.href = 'search.html' ">
             Search!
           </button>
         </div>
@@ -102,7 +102,7 @@
         <div class="col-md-6">
           <h1>Bill Generator</h1>
           <p>bing chilling</p>
-          <button type="button" class="btn btn-primary" onclick="location.href = 'bill.php' ">
+          <button type="button" class="btn btn-primary" onclick="location.href = 'bill.html' ">
             Generate!
           </button>
         </div>

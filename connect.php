@@ -11,8 +11,10 @@ if ($conn->connect_error) {
     $stmt = $conn->prepare("insert into car(brandName, modelName, engineCapacity) values(?, ?, ?)");
     $stmt->bind_param("ssi", $brandName, $modelName, $engineCapacity);
     $stmt->execute();
-    echo 'Car entry registration successful!';
+    //echo 'Car entry registration successful!';
     $stmt->close();
-    $stmt->close();
+    header('Location: car_entry.php');
+    //echo "<meta http-equiv='refresh' content='0'>";
+    //$stmt->close();
 }
 ?>
