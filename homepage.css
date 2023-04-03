@@ -1,9 +1,16 @@
 body{
-    background-color: black;
+    background-color: #1B2430;
 }
 
 h1, p{
-    color: wheat;
+    color: white;
 }
 
-
+.logo{
+    width: 13vh;
+    height: 13vh;
+    object-fit: contain;
+    display: flex;
+    justify-content: space-between;
+    
+}

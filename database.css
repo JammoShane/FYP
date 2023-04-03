@@ -1,22 +1,37 @@
 .masthead{
-    background-image: url('images/server.jpg');
+    background-image: url('images/server2.png');
     background-size: cover;
     min-height: 100vh;
     position: relative;
 }
 
-.table {
+table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    background-color: #1B2430;
   }
   
-.td, .th {
-    border: 1px solid #dddddd;
+.container, .card, .card-body {
+  background-color: #1B2430;
+}
+
+td, th {
+
     text-align: left;
     padding: 8px;
+    color: white;
   }
   
-.tr:nth-child(even) {
-    background-color: #dddddd;
+tr:nth-child(even) {
+    color: white;
   }
+
+.logo{
+  width: 13vh;
+  height: 13vh;
+  object-fit: contain;
+  display: flex;
+  justify-content: space-between;
+    
+}

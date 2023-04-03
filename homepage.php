@@ -17,6 +17,9 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="homepage.php">
+        <img class="logo" src="images/proton2.png" alt="Proton Logo" />
+      </a>
       <a class="navbar-brand" href="#">Car Dealership Management System</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +29,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="homepage.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="customize.html">Customize</a>
@@ -35,10 +38,7 @@
             <a class="nav-link" href="car_entry.php">Car Entry</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="search.html">Search</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="bill.html">Bill</a>
+            <a class="nav-link" href="search.php">Search</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="database.php">Database</a>
@@ -50,82 +50,74 @@
 
   <main class="body my-5">
     <div class="container">
+
       <div class="row">
-        <div class="col-md-6">
-          <img src="images/idea.jpg" alt="image of a Bughatti Chiron" class="img-fluid" />
+
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>Car Customizer</h3>
+            </div>
+            <div class="card-body">
+              <img src="images/idea.jpg" alt="image of lightbulbs" class="img-fluid" />
+              <p>Customize an existing car's details to your liking</p>
+              <button type="button" class="btn btn-primary" onclick="location.href = 'customize.html' ">
+                Customize!
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6">
-          <h1>Car Customization System</h1>
-          <p>Customize an existing car's details to your liking</p>
-          <button type="button" class="btn btn-primary" onclick="location.href = 'customize.html' ">
-            Customize!
-          </button>
+
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>Car Entry</h3>
+            </div>
+            <div class="card-body">
+              <img src="images/chiron.jpg" alt="image of a Bughatti Chiron" class="img-fluid" />
+              <p>Add cars and their details to the existing database</p>
+              <button type="button" class="btn btn-primary" onclick="location.href = 'car_entry.php' ">
+                Enter!
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>Search</h3>
+            </div>
+            <div class="card-body">
+              <img src="images/search.jpg" alt="image of a magnifying glass" class="img-fluid" />
+              <p>Search for existing cars within the database</p>
+              <button type="button" class="btn btn-primary" onclick="location.href = 'search.php' ">
+                Search!
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>Database</h3>
+            </div>
+            <div class="card-body">
+              <img src="images/server.jpg" alt="image of a server room" class="img-fluid" />
+              <p>View existing cars within the database</p>
+              <button type="button" class="btn btn-primary" onclick="location.href = 'database.php' ">
+                Enter!
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <br />
-
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/chiron.jpg" alt="image of a Bughatti Chiron" class="img-fluid" />
-        </div>
-        <div class="col-md-6">
-          <h1>Car Entry</h1>
-          <p>Add cars and their details to the existing database</p>
-          <button type="button" class="btn btn-primary" onclick="location.href = 'car_entry.php' ">
-            Enter!
-          </button>
-        </div>
-      </div>
-
-      <br />
-
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/search.jpg" alt="image of a magnifying glass" class="img-fluid" />
-        </div>
-        <div class="col-md-6">
-          <h1>Search Entry</h1>
-          <p>Search for cars and their details to the existing database</p>
-          <button type="button" class="btn btn-primary" onclick="location.href = 'search.html' ">
-            Search!
-          </button>
-        </div>
-      </div>
-
-      <br />
-
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/bill.jpg" alt="image of a receipt" class="img-fluid" />
-        </div>
-        <div class="col-md-6">
-          <h1>Bill Generator</h1>
-          <p>bing chilling</p>
-          <button type="button" class="btn btn-primary" onclick="location.href = 'bill.html' ">
-            Generate!
-          </button>
-        </div>
-      </div>
-
-      <br />
-
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/server.jpg" alt="image of a server room" class="img-fluid" />
-        </div>
-        <div class="col-md-6">
-          <h1>Database</h1>
-          <p>View the current database and its entries</p>
-          <button type="button" class="btn btn-primary" onclick="location.href = 'database.php' ">
-            View!
-          </button>
-        </div>
-      </div>
     </div>
 
     <footer>
-      <p class="my-5">
+      <p class="my-3">
         Copyright © 2022 – All Rights Reserved By Unreal Devs Academy
       </p>
     </footer>

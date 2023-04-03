@@ -46,6 +46,9 @@ $mysqli->close();
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="homepage.php">
+        <img class="logo" src="images/proton2.png" alt="Proton Logo" />
+      </a>
       <a class="navbar-brand" href="#">Car Dealership Management System</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,13 +67,10 @@ $mysqli->close();
             <a class="nav-link" href="car_entry.php">Car Entry</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="search.html">Search</a>
+            <a class="nav-link" href="search.php">Search</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="bill.html">Bill</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="database.html">Database</a>
+            <a class="nav-link" href="database.php">Database</a>
           </li>
         </ul>
       </div>
@@ -94,7 +94,7 @@ $mysqli->close();
                 <label for="modelName">Engine Capacity:</label>
                 <input type="text" id="modelName" name="engineCapacity" /><br /><br />
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary">
+                  <button type="submit" class="btn btn-success">
                     Submit
                   </button>
                 </div>

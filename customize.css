@@ -1,0 +1,20 @@
+.logo {
+    width: 13vh;
+    height: 13vh;
+    object-fit: contain;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.carimg{
+    width: 30vh;
+    height: 20vh;
+    object-fit: contain;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container{
+    justify-content: center;
+}

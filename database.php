@@ -44,6 +44,9 @@ $mysqli->close();
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="homepage.php">
+        <img class="logo" src="images/proton2.png" alt="Proton Logo" />
+      </a>
       <a class="navbar-brand" href="#">Car Dealership Management System</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,10 +65,7 @@ $mysqli->close();
             <a class="nav-link" href="car_entry.php">Car Entry</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="search.html">Search</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="bill.html">Bill</a>
+            <a class="nav-link" href="search.php">Search</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="database.php">Database</a>
@@ -111,7 +111,7 @@ $mysqli->close();
                     <td>
                       <?php echo $rows['engineCapacity']; ?>
                     </td>
-                    <td><a href='#' class="btn btn-primary">Update</a></td>
+                    <td><a href="update.php?id=<?php echo $rows['id']; ?>" class="btn btn-success">Update</a></td>
                     <td><a href="delete.php?id=<?php echo $rows['id']; ?>" class="btn btn-danger"
                         onclick="DeleteConfirm()">Delete</a></td>
                     <script>
@@ -131,7 +131,7 @@ $mysqli->close();
     </div>
 
     <footer>
-      <p class="my-5">
+      <p class="my-3">
         Copyright © 2022 – All Rights Reserved By Unreal Devs Academy
       </p>
     </footer>
