@@ -1,9 +1,13 @@
-body{
-    background-color: #1B2430;
+p, div{
+    color: white;
 }
 
-h1, p{
-    color: white;
+h1 {
+    color:black
+}
+
+footer {
+    background-color: #1b2f4a;
 }
 
 .logo{
@@ -11,6 +15,5 @@ h1, p{
     height: 13vh;
     object-fit: contain;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;  
 }

@@ -39,6 +39,12 @@ $mysqli->close();
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="car_entry.css" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
 
   <title>Car Entry</title>
 </head>
@@ -57,19 +63,16 @@ $mysqli->close();
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="homepage.php">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="customize.html">Customize</a>
+          <li class="nav-item">
+            <a class="nav-link" href="saga.html">Customize</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="car_entry.php">Car Entry</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="search.php">Search</a>
-          </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="database.php">Database</a>
           </li>
         </ul>
@@ -77,34 +80,74 @@ $mysqli->close();
     </nav>
   </header>
 
-  <main>
-    <div class="masthead">
-      <section>
-        <div class="container overlay d-flex justify-content-center align-items-center">
-          <div class="card">
-            <div class="card-header">
-              <h2>Car Entry Field</h2>
+  <section class="vh-100">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 px-0 d-none d-sm-block">
+          <img src="images/x50_.png" alt="picture of a Proton X70" class="w-100 vh-100"
+            style="object-fit: cover; object-position: left;">
+        </div>
+        <div class="col-sm-4 text-black ">
+          <div class="row">
+            <div class="col-sm-3">
             </div>
-            <div class="card-body">
-              <form action="connect.php" method="post">
-                <label for="brandName">Brand Name: </label>
-                <input type="text" id="brandName" name="brandName" /><br /><br />
-                <label for="modelName">Model Name:</label>
-                <input type="text" id="modelName" name="modelName" /><br /><br />
-                <label for="modelName">Engine Capacity:</label>
-                <input type="text" id="modelName" name="engineCapacity" /><br /><br />
-                <div class="text-center">
-                  <button type="submit" class="btn btn-success">
-                    Submit
-                  </button>
-                </div>
-              </form>
+            <div class="col-sm">
+              </br>
+              <h3 class="fw-bold mb-0">Car Entry Field</h3>
+              </br>
             </div>
           </div>
+
+          </br>
+          </br>
+
+          <div
+            class="d-flex justify-content-center align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+            <form action="connect.php" method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="modelName">Model Name: </label>
+                </div>
+                <div class="col-md-6">
+                  <input class="input-group" type="text" id="modelName" name="modelName" required><br />
+                </div>
+              </div>
+              </br>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="color">Color:</label>
+                </div>
+                <div class="col-md-6">
+                  <input class="input-group" type="text" id="color" name="color" required><br />
+                </div>
+              </div>
+              </br>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="drivetrain">Drivetrain:</label>
+                </div>
+                <div class="col-md-6">
+                  <input class="input-group" type="text" id="drivetrain" name="drivetrain" required><br />
+                </div>
+              </div>
+              </br>
+              <div class="text-center">
+                <button type="submit" class="btn btn-block btn-primary" onClick="EntrySuccess()">
+                  Submit
+                </button>
+                <script>
+                  function EntrySuccess() {
+                    confirm("Record inserted successfully!");
+                  }
+                </script>
+              </div>
+            </form>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
-  </main>
+  </section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -115,6 +158,8 @@ $mysqli->close();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+
 </body>
 
 </html>

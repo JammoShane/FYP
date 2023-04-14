@@ -21,14 +21,14 @@ $mysqli->close();
 
 //if (isset($_POST['submit'])) {
 $id = $_POST['id'];
-$brandName = $_POST['brandName'];
 $modelName = $_POST['modelName'];
-$engineCapacity = $_POST['engineCapacity'];
+$color = $_POST['color'];
+$drivetrain = $_POST['drivetrain'];
 
 echo $id;
-echo $brandName;
+echo $modelName;
 
-$sql = " UPDATE car SET brandName = '$brandName', modelName = '$modelName', engineCapacity = $engineCapacity WHERE id = $id";
+$sql = " UPDATE car SET modelName = '$modelName', color = '$color', drivetrain = '$drivetrain' WHERE id = $id";
 
 //$result = mysqli_query($conn, $query);
 if ($conn->query($sql) === TRUE) {

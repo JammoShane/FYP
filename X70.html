@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Customizer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="customize.css" />
+  </head>
+
+  <body style="background-color: #1b2430;">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="homepage.php">
+          <img class="logo" src="images/proton2.png" alt="Proton Logo" />
+        </a>
+        <a class="navbar-brand" href="#">Car Dealership Management System</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="homepage.php"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="saga.html">Customize</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="car_entry.php">Car Entry</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="database.php">Database</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="masthead">
+      <div class="container">
+        <ul class="nav nav-tabs mb-3">
+          <li class="nav-item">
+            <a class="nav-link" href="saga.html">Saga</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="iriz.html">Iriz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="X50.html">X50</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="X70.html">X70</a>
+          </li>
+        </ul>
+        <img class = "mx-auto carimg" src="images/colors/X70/X70_armour.png" alt="Proton X70" id="image4" /></br>
+
+        <div class="row">
+          <div class="col-md-3">
+            <h4>
+              Color:
+            </h4>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" onclick="changeX70Cinnamon()" type="radio" name="X70color" value="Cinnamon Brown" id="x70Cinnamon" >
+              <label class="form-check-label" for="x70Cinnamon">
+                Cinnamon Brown
+              </label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" onclick="changeX70Ruby()" type="radio" name="X70color" value="Ruby Red" id="x70Ruby" >
+              <label class="form-check-label" for="x70Ruby">
+                Ruby Red
+              </label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" onclick="changeX70Jet()" type="radio" name="X70color" value="Jet Grey" id="x70Jet" >
+              <label class="form-check-label" for="x70Jet">
+                Jet Grey
+              </label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" onclick="changeX70Snow()" type="radio" name="X70color" value="Snow White" id="x70Snow" >
+              <label class="form-check-label" for="x70Snow">
+                Snow White
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <h4>
+              Wheels:
+            </h4>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="X70wheel" value="14 Inch Alloy Single Tone" id="x70Single" checked>
+              <label class="form-check-label" for="x70Single">
+                14" Alloy Single Tone
+              </label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="X70wheel" value="15 Inch Alloy Dual Tone" id="x70Dual" >
+              <label class="form-check-label" for="x70Dual">
+                15" Alloy Dual Tone
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <h4>
+              Drivetrain:
+            </h4>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="X70drive" value="DCT 1.5 TGDi" id="x70_5" checked>
+              <label class="form-check-label" for="x70_5">
+                DCT 1.5 TGDi
+              </label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="X70drive" value="DCT 1.8 TGDi" id="x70_8" >
+              <label class="form-check-label" for="x70_8">
+                DCT 1.8 TGDi
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+              <h4>
+                  Seat Material:
+              </h4>
+          </div>
+          <div class="col-md-2">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="seat" value="Fabric" id="seatF" checked>
+                  <label class="form-check-label" for="seatF">
+                    Fabric
+                  </label>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="seat" value="Leatherette" id="seatL">
+                  <label class="form-check-label" for="seatL">
+                    Leatherette
+                  </label>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h4>
+                  Steering Wheel Material:
+              </h4>
+          </div>
+          <div class="col-md-2">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="steer" value="Leather" id="steerU" checked>
+                  <label class="form-check-label" for="steerU">
+                    Leather
+                  </label>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="steer" value="Nappa Leather" id="steerL">
+                  <label class="form-check-label" for="steerL">
+                    Nappa Leather
+                  </label>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <h4>
+            Front Parking Sensors:
+          </h4>
+        </div>
+        <div class="col-md-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sensor" value="2 Sensors" id="sensorT" checked>
+            <label class="form-check-label" for="sensorT">
+              2 Sensors
+            </label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sensor" value="4 Sensors" id="sensorF">
+            <label class="form-check-label" for="sensorF">
+              4 Sensors
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <h4>
+            Projector Headlamps:
+          </h4>
+        </div>
+        <div class="col-md-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="headlamp" value="Halogen" id="headlampH" checked>
+            <label class="form-check-label" for="headlampH">
+              Halogen 
+            </label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="headlamp" value="LED" id="headlampL">
+            <label class="form-check-label" for="headlampL">
+              LED
+            </label>
+          </div>
+        </div>
+      </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-success" onclick="displayRadioValue()">
+            Customize
+          </button>
+        </div>
+
+      </br>
+
+        <div class="customize">
+          <div id="color"></div>
+          <div id="wheel"></div>
+          <div id="drive"></div>
+          <div id="seat"></div>
+          <div id="steer"></div>
+          <div id="sensor"></div>
+          <div id="headlamp"></div>
+        </div>
+
+      </br>
+
+      <script>
+          function displayRadioValue() {
+              document.getElementById("color").innerHTML = "";
+              var color = document.getElementsByName('X70color');
+              
+              for(i = 0; i < color.length; i++) {
+                  
+                  if(color[i].type="radio") {
+                  
+                      if(color[i].checked)
+                          document.getElementById("color").innerHTML
+                                  += " Color: "
+                                  + color[i].value + "<br>";
+                  }
+              }
+
+              document.getElementById("wheel").innerHTML = "";
+              var wheel = document.getElementsByName('X70wheel');
+              
+              for(i = 0; i < wheel.length; i++) {
+                  
+                  if(wheel[i].type="radio") {
+                  
+                      if(wheel[i].checked)
+                          document.getElementById("wheel").innerHTML
+                                  += " Wheels: "
+                                  + wheel[i].value + "<br>";
+                  }
+              }
+
+              document.getElementById("drive").innerHTML = "";
+                var drive = document.getElementsByName('X70drive');
+                
+                for(i = 0; i < drive.length; i++) {
+                    
+                    if(drive[i].type="radio") {
+                    
+                        if(drive[i].checked)
+                            document.getElementById("drive").innerHTML
+                                    += " Drivetrain: "
+                                    + drive[i].value + "<br>";
+                    }
+                }
+
+              document.getElementById("seat").innerHTML = "";
+              var seat = document.getElementsByName('seat');
+              
+              for(i = 0; i < seat.length; i++) {
+                  
+                  if(seat[i].type="radio") {
+                  
+                      if(seat[i].checked)
+                          document.getElementById("seat").innerHTML
+                                  += " Seat Material: "
+                                  + seat[i].value + "<br>";
+                  }
+              }
+
+              document.getElementById("steer").innerHTML = "";
+                var steer = document.getElementsByName('steer');
+                
+                for(i = 0; i < seat.length; i++) {
+                    
+                    if(steer[i].type="radio") {
+                    
+                        if(steer[i].checked)
+                            document.getElementById("seat").innerHTML
+                                    += " Steering Wheel Material: "
+                                    + steer[i].value + "<br>";
+                    }
+              }
+
+              document.getElementById("sensor").innerHTML = "";
+                var sensor = document.getElementsByName('sensor');
+                
+                for(i = 0; i < sensor.length; i++) {
+                    
+                    if(sensor[i].type="radio") {
+                    
+                        if(sensor[i].checked)
+                            document.getElementById("sensor").innerHTML
+                                    += " Steering Wheel Material: "
+                                    + sensor[i].value + "<br>";
+                    }
+              }
+
+              document.getElementById("headlamp").innerHTML = "";
+              var headlamp = document.getElementsByName('headlamp');
+              
+              for(i = 0; i < seat.length; i++) {
+                  
+                  if(headlamp[i].type="radio") {
+                  
+                      if(headlamp[i].checked)
+                          document.getElementById("headlamp").innerHTML
+                                  += " Headlamps: "
+                                  + headlamp[i].value + "<br>";
+                  }
+              }
+          }
+      </script>
+      </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start">
+  </br>
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-car me-3"></i></i>Proton
+          </h6>
+          <!-- Links -->
+          <p>
+            <a href="https://www.facebook.com/ProtonCarsOfficial/" class="text-reset">
+              <i class="fab fa-facebook-f me-3"></i>
+              Facebook
+            </a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/protoncars/" class="text-reset">
+              <i class="fab fa-instagram me-3"></i>
+              Instagram
+            </a>
+          </p>
+          <p>
+            <a href="https://www.youtube.com/protoninteractive" class="text-reset">
+              <i class="fab fa-youtube me-3"></i>
+              Youtube
+            </a>
+          </p>
+          <p>
+            <a href="https://github.com/JammoShane/FYP" class="text-reset">
+              <i class="fab fa-github me-3"></i>
+              Github
+            </a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Lengkok Dumbar, Jelutong, Penang</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            protonsupport@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i>018-245-4617</p>
+          <p><i class="fas fa-print me-3"></i>019-505-1072</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.1);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://www.proton.com/en">www.proton.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+    <script src="changeImage.js"></script>
+  </body>
+</html>

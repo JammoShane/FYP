@@ -8,13 +8,29 @@
 }
 
 .carimg{
-    width: 30vh;
-    height: 20vh;
+    width: 70vh;
+    height: 60vh;
     object-fit: contain;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.container{
+.masthead{
     justify-content: center;
 }
+
+.nav-tabs .nav-link {
+    --mdb-nav-tabs-link-color: #3b71ca ;
+}
+
+
+footer {
+    background-color: #1b2f4a;
+}
+
+h3, h4, label, ul, p, div, .customize{
+    color:white;
+}
+
+@import '~mdb-ui-kit/css/mdb.min.css'; 
